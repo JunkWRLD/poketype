@@ -196,59 +196,7 @@ def effectiveness(type1, type2=None):
     print(f"1/4x effective against you: {quad_resist_list}")
     print(f"No effect against you: {immune_list}")
 
-
-# def effectiveness(type1, type2=None):
-#     super_list = []
-#     not_very_list = []
-#     immune_list = []
-#     for i in type1:
-#         if i[1] > 1:
-#             super_list.append(i[0])
-#         elif i[1] > 0:
-#             not_very_list.append(i[0])
-#         else:
-#             immune_list.append(i[0])
-#     if type2 != None:
-#         for j in type2:
-#             if j[1] > 1:
-#                 super_list.append(j[0])
-#             elif j[1] > 0:
-#                 not_very_list.append(j[0])
-#             else:
-#                 immune_list.append(j[0])
-#         super_list, not_very_list, immune_list, quad_eff_list, quad_resist_list = logic(super_list, not_very_list, immune_list)
-
-#     print(f"4x effective against you: {quad_eff_list}")
-#     print(f"Super effective against you: {super_list}")
-#     print(f"Not very effective against you: {not_very_list}")
-#     print(f"1/4x effective against you: {quad_resist_list}")
-#     print(f"No effect against you: {immune_list}")
-    
-
-# def logic(super_list, not_very_list, immune_list):
-#     quad_eff_list = []
-#     quad_resist_list = []
-#     count = 0
-#     for type in immune_list:
-#         if type in super_list:
-#             super_list.remove(type)
-#         if type in not_very_list:
-#             not_very_list.remove(type)
-#     for type in not_very_list:
-#         count += 1
-#         if type in super_list:
-#             not_very_list.remove(type)
-#             super_list.remove(type)
-#         if count > 1:
-#             quad_resist_list.append(type)
-#             not_very_list.remove(type)
-#     for type in super_list:
-#         count += 1
-#         if count > 1:
-#             quad_eff_list.append(type)
-#             super_list.remove(type)
         
-
 def main():
     
     x = 1
